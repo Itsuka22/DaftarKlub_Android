@@ -1,8 +1,10 @@
 package com.handoyo.project_view;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,10 +28,6 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
     @Override
     public ProjectViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_project,parent,false);
-
-
-
-
         return new ProjectViewHolder(view);
     }
 
@@ -45,12 +43,21 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
         private ImageView appImage;
         private TextView appTitle;
         private TextView appDescription;
+        private Button button;
 
         public ProjectViewHolder(@NonNull View itemView) {
             super(itemView);
             appImage = itemView.findViewById(R.id.image_view_project_icon);
             appTitle = itemView.findViewById(R.id.text_view_project_title);
             appDescription = itemView.findViewById(R.id.text_view_project_description);
+            button = itemView.findViewById(R.id.detailklub);
+
+//            button.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(MainActivity.this,DetailKlub.class);
+//                }
+//            });
 
         }
 

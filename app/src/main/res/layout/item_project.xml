@@ -8,10 +8,13 @@
     app:cardCornerRadius="6dp"
     app:cardElevation="4dp">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/gradient1">
+        android:layout_height="217dp"
+        android:background="@drawable/gradient1"
+        tools:context="">
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_project_icon_container"
@@ -39,8 +42,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignTop="@id/card_view_project_icon_container"
-            android:layout_toEndOf="@id/card_view_project_icon_container"
             android:layout_marginLeft="6dp"
+            android:layout_toEndOf="@id/card_view_project_icon_container"
             android:fontFamily="sans-serif-medium"
             android:textColor="#FFFFFF"
             android:textSize="20dp"
@@ -58,13 +61,23 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="4dp"
-            android:textAlignment="textStart"
             android:layout_toEndOf="@id/card_view_project_icon_container"
             android:fontFamily="sans-serif-medium"
+            android:textAlignment="textStart"
             android:textColor="#ffffff"
             android:textSize="14sp"
             tools:text="Ini adalah deskripsi" />
 
+        <Button
+            android:id="@+id/detailklub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="141dp"
+            android:layout_marginBottom="23dp"
+            android:text="Detail" />
 
     </RelativeLayout>
+
 </androidx.cardview.widget.CardView>
